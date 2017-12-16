@@ -1,0 +1,95 @@
+.box{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 400px;
+  height: 300px;
+  margin: auto;
+}
+
+.lime{
+  position: static;
+  color: #00B900;
+  width: 100%;
+  margin: auto;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.input-div{
+  line-height: 9px;
+  text-align: center;
+}
+
+.input{
+  width: 180px;
+  height: 20px;
+  padding: 6px 6px;
+  border: 0;
+  font-size:0.7em;
+  font-family: Arial, sans-serif;
+  color: black;
+  border: solid 1px #ccc;
+}
+
+.login-div{
+  width: 380px;
+  height: 34px;
+  margin: 10px;
+  text-align: center;
+}
+
+.login{
+  width: 194px;
+  height: 34px;
+  font-size:0.7em;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #00C43D;
+  border: #00C43D;
+}
+
+.signup-div{
+  position: absolute;
+  bottom: 0;
+  width: 380px;
+  height: 34px;
+  margin: 10px;
+  text-align: center;
+}
+
+.signup{
+  width: 194px;
+  height: 34px;
+  font-size:0.7em;
+  font-family: Arial, sans-serif;
+  color: black;
+  background-color: white;
+  border: solid 1px #ccc
+}
+
+.signup-font{
+  position: static;
+  color: #ccc;
+  width: 100%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.explain-message{
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+::-webkit-input-placeholder{
+  color: #aaa;
+}
