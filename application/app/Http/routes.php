@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
-Route::get('/chat', 'ChatController@index');
+Route::get('/', 'LoginIndexController@index');
+Route::get('/chat', 'ChatIndexController@index');
 
 Route::group(array('prefix' => 'api'), function(){
 	Route::controller('signup', 'SignupController');
 	Route::controller('login', 'LoginController');
+	Route::controller('chat', 'ChatController');
 });

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model {
-  protected $fillable = array('nickname', 'password', 'sessionid');
+class Friend extends Model {
+  protected $fillable = array('user_id', 'friend_id');
   public $timestamps = false;
 }

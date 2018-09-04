@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model {
-  protected $fillable = array('nickname', 'password', 'sessionid');
+class GroupMember extends Model {
+  protected $fillable = array('group_id', 'user_id');
   public $timestamps = false;
 }

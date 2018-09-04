@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model {
-  protected $fillable = array('nickname', 'password', 'sessionid');
+class Chat extends Model {
+  protected $fillable = array('group_id', 'user_id', 'content');
   public $timestamps = false;
 }

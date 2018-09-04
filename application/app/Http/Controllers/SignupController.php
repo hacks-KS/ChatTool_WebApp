@@ -4,26 +4,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
+use Hash;
 use Response;
 use Input;
 use App\User;
 
 class SignupController extends Controller{
-  public function postSearch(){
-    $nickname_num = count(User::where('nickname', Input::get('nickname'))->get());
-    $uniqueidid_num = count(User::where('uniqueid', Input::get('id'))->get());
-    return Response::json(array(
-      'success' => true,
-      'nickname' => $nickname_num,
-      'uniqueid' => $uniqueidid_num
-    ));
-  }
-
   public function postSave(){
-    User::create(array(
-      'nickname' => Input::get('nickname'),
-      'uniqueid' => Input::get('id')
-    ));
-    return Response::json(array('success' => true));
+    $nickname_num = User::where('nickname', Input::get('nickname'))->get();
+    if(count($nickname_num) == 0){
+      $hash_pass = Hash::make(Input::get('password'));
+      User::create(array(
+        'nickname' => Input::get('nickname'),
+        'password' => $hash_pass
+      ));
+      return Response::json(array('success' => true));
+    }else{
+      return Response::json(array('success' => false));
+    };
   }
 }
